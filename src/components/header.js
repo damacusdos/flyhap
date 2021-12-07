@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Button } from '@mui/material';
+import React from "react";
+import styled from "styled-components";
+import { Button } from "@mui/material";
 
 const HeaderWrapper = styled.div`
   height: 80px;
@@ -13,16 +13,27 @@ const HeaderWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .logo {
+      font-size: 1.2rem;
+    }
   }
-`
+`;
+const LoginButton = {
+  textTransform: "none",
+  color: "#000",
+};
 
-const Header = props => {
-  return (<HeaderWrapper>
-    <div className="innerWrapper">
-      <div>Flyhap</div>
-      <Button href="/login">Log out</Button>
-    </div>
-  </HeaderWrapper>)
+const Header = (props) => {
+  return (
+    <HeaderWrapper>
+      <div className="innerWrapper">
+        <div className="logo">Flyhap</div>
+        <Button sx={LoginButton} href="/login">
+          Log out
+        </Button>
+      </div>
+    </HeaderWrapper>
+  );
 };
 
 export default Header;

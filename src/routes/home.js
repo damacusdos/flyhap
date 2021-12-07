@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const HomeWrapper = styled.div`
-  background-color: #F8E2E9;
-  font-family: 'Ubuntu', sans-serif;
+  background-color: #f8e2e9;
+  font-family: "Ubuntu", sans-serif;
   height: 100%;
   width: 100%;
   display: flex;
@@ -29,18 +29,25 @@ const HomeWrapper = styled.div`
   }
   a {
     text-decoration: none;
+    color: #000;
   }
   a:visited {
     color: #000;
   }
-`
+`;
 
 const Home = () => {
-  return (<HomeWrapper>
-    <Link to="/main"><h1>Flyhap</h1></Link>
-    <p>coming soon...</p>
-    <p className="login-text">Click <Link to="/login">here</Link> to log in</p>
-  </HomeWrapper>)
+  return (
+    <HomeWrapper>
+      <Link to="/main">
+        <h1>Flyhap</h1>
+      </Link>
+      <p>coming soon...</p>
+      <p className="login-text">
+        Click <Link to="/login">here</Link> to log in
+      </p>
+    </HomeWrapper>
+  );
 };
 
 export default Home;
