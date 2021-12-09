@@ -59,7 +59,7 @@ const Login = () => {
               Sign Up
             </Button>
           </div>
-          <Link to="/" className="reset-password">
+          <Link to="/reset" className="reset-password">
             Forgot password?
           </Link>
         </CardContent>
